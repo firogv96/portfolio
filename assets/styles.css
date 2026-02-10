@@ -102,7 +102,7 @@ h6 {
 
 /* ESTILOS DE CONSTRUCCIÓN */
 
-#construccion {
+#construction {
     column-count: auto;
     width: 100%;
     min-width: 340px;
@@ -137,6 +137,9 @@ h6 {
 @media (max-width: 480px) {
     h3 {
         font-size: 3rem;
+    }
+    #construction {
+        padding-bottom: 0px;
     }
 }
 
