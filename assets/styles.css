@@ -32,7 +32,11 @@
 
 /* BREAKPOINTS */
 /* Móviles grandes / tablets pequeñas */
-@media (min-width: 370px) and (max-width: 1024px) {}
+@media (min-width: 370px) and (max-width: 1024px) {
+    h3 {
+        font-size: 3rem;
+    }
+}
 
 /* Laptops y desktops */
 @media (min-width: 1025px) and (max-width: 1440px) {}
