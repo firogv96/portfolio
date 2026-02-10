@@ -1,0 +1,90 @@
+:root {
+    /* COLORS */
+    --color-bg: #e9e9e9;
+    --color-elevation: #ddd;
+
+    --color-text: #222;
+
+    --color-gray-100: #222222ff;
+    --color-gray-90: #222222e6;
+    --color-gray-80: #222222cc;
+    --color-gray-70: #222222b3;
+    --color-gray-60: #22222299;
+    --color-gray-50: #22222280;
+    --color-gray-40: #22222266;
+    --color-gray-30: #2222224d;
+    --color-gray-20: #22222233;
+    --color-gray-10: #2222221a;
+
+    --color-primary-bg: #0992c2;
+    --color-primary-border: #0ac4e0;
+    --color-secondary: #0b2d72;
+    --color-tertiary: #f6e7bc;
+
+    /* FONT */
+    --font-inter: "Inter", Arial, sans-serif;
+    --font-intertight: "Inter Tight", Arial, sans-serif;
+    --font-zalando: "Zalando Sans", Arial, sans-serif;
+    --font-body: var(--font-inter);
+    --font-heading: var(--font-zalando);
+    --font-subtitle: var(--font-intertight);
+}
+
+/* BREAKPOINTS */
+/* Móviles pequeños */
+@media (max-width: 480px) {}
+
+/* Móviles grandes / tablets pequeñas */
+@media (min-width: 481px) and (max-width: 1024px) {}
+
+/* Laptops y desktops */
+@media (min-width: 1025px) and (max-width: 1440px) {}
+
+body {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: black;
+    background: var(--color-bg);
+    font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-subtitle);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 6rem;
+    line-height: 1.05;
+    color: var(--color-text);
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.4rem;
+}
