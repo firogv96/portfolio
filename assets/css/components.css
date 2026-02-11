@@ -1,0 +1,93 @@
+/* Iconos de Phosphor Icons */
+.icon-32 {
+    font-size: 32px;
+}
+
+.icon-24 {
+    font-size: 24px;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-intertight);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, font-weight 0.3s ease;
+}
+
+.btn-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cta {
+    background-color: var(--color-primary-bg);
+    border-color: var(--color-primary-border);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: var(--gap-btn-cta);
+    height: var(--size-btn-cta-height);
+}
+
+.btn-cta:hover {
+    background-color: var(--color-primary-border);
+}
+
+.btn-t {
+    background-color: transparent;
+    border-color: var(--color-btn-t);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 300;
+    padding: var(--gap-btn-t);
+    height: var(--size-btn-t-height);
+    border-radius: var(--radius-5);
+}
+
+.btn-t:hover {
+    border-color: white;
+    /* font-weight: 500; */
+}
+
+.btn-icon {
+    background-color: var(--color-btn-gray);
+    font-size: 1.2rem;
+    height: var(--size-btn-cta-height);
+    width: var(--size-btn-cta-height);
+    color: white;
+}
+
+.btn-icon:hover {
+    background-color: var(--color-btn-gray-hover);
+}
+
+/* Action bar */
+ui-action-bar {
+    background-color: var(--color-gray-70);
+    border-radius: var(--radius-8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 1000;
+    /* importante: el contenedor no bloquea clicks */
+    pointer-events: none;
+}
+
+ui-action-bar .action-bar {
+    /* los botones sí reciben clicks */
+    pointer-events: auto;
+    width: min(980px, 100%);
+}

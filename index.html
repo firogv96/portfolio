@@ -1,42 +1,46 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Portafolio de Alvaro</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
   </head>
-
   <body>
-    <div class="center-content">
-      <div id="construction">
-        <div id="construction-image">
-          <img
-            id="logo"
-            src="https://cms.firodsg.com/wp-content/uploads/2026/02/firo_logo_svg.svg"
-            alt="Portafolio en construcción"
-          />
-          <img
-            id="icon"
-            src="https://cms.firodsg.com/wp-content/uploads/2026/02/vlc_cone_18921.png"
-            alt="Icono de construcción" />
-        </div>
-        <h3>Portafolio en construcción</h3>
-        <p>
-          ¡Hola! Gracias por visitar mi portafolio. Actualmente estoy trabajando
-          en su desarrollo para mostrar mis proyectos y habilidades de la mejor
-          manera posible. Por favor, vuelve pronto para ver el resultado final.
-        </p>
-      </div>
-    </div>
+    <script>
+      (function () {
+        // 1) Prioridad: ?lang=es|en en la URL
+        const url = new URL(window.location.href);
+        const paramLang = (url.searchParams.get("lang") || "").toLowerCase();
+
+        // 2) Preferencia guardada
+        const savedLang = (localStorage.getItem("lang") || "").toLowerCase();
+
+        // 3) Idioma del navegador
+        const navLang = (navigator.language || "en").toLowerCase();
+        const browserLang = navLang.startsWith("es") ? "es" : "en";
+
+        const lang =
+          paramLang === "es" || paramLang === "en"
+            ? paramLang
+            : savedLang === "es" || savedLang === "en"
+              ? savedLang
+              : browserLang;
+
+        // Guarda preferencia si vino por query
+        if (paramLang === "es" || paramLang === "en") {
+          localStorage.setItem("lang", paramLang);
+        }
+
+        // Importante: usa rutas relativas para que funcione en GitHub Pages (subcarpeta)
+        window.location.replace(`./${lang}/`);
+      })();
+    </script>
+
+    <noscript>
+      <p>
+        JavaScript is required. Choose language:
+        <a href="./en/">English</a> | <a href="./es/">Español</a>
+      </p>
+    </noscript>
   </body>
 </html>
