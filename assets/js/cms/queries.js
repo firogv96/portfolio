@@ -37,14 +37,14 @@ export const QUERY_ENTRY_BY_URI = `
 
         # ✅ ACF Group
         customMeta {
-          ano
           ciudad
           colaboracion
-          language
           noRemunerado
           nombreDelColaborador
           pais
           relacionLaboral
+          relevancia
+          trabajoDeArchivo
         }
       }
 
