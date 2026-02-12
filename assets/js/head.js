@@ -29,13 +29,16 @@
 
   // 2) Google Fonts preconnect
   addLink({ rel: "preconnect", href: "https://fonts.googleapis.com" });
-  addLink({ rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" });
+  addLink({
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossorigin: "",
+  });
 
   // 3) Google Fonts stylesheet
   addLink({
     rel: "stylesheet",
-    href:
-      "https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap",
   });
 
   // 4) Phosphor Icons (regular + fill)
@@ -74,4 +77,25 @@
   addScriptModule("/components/index.js");
   addScriptModule("/assets/js/lang/bootstrap.js");
   /* addScriptModule("/assets/js/cms/debug-acf.js"); */
+
+  // 6) Favicons
+  addLink({ rel: "icon", href: "/assets/favicons/favicon.ico" });
+  addLink({
+    rel: "apple-touch-icon",
+    href: "/assets/favicons/apple-touch-icon.png",
+    sizes: "180x180",
+  });
+  addLink({
+    rel: "icon",
+    href: "/assets/favicons/favicon-32x32.png",
+    sizes: "32x32",
+    type: "image/png",
+  });
+  addLink({
+    rel: "icon",
+    href: "/assets/favicons/favicon-16x16.png",
+    sizes: "16x16",
+    type: "image/png",
+  });
+  addLink({ rel: "manifest", href: "/assets/favicons/site.webmanifest" });
 })();
