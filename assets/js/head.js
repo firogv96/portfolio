@@ -73,4 +73,6 @@
 
   // 5) Web Components registry
   addScriptModule("/components/index.js");
+  addScriptModule("/assets/js/bootstrap.js");
+  /* addScriptModule("/assets/js/cms/debug-acf.js"); */
 })();
