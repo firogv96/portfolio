@@ -1,6 +1,6 @@
 import { getEntryByUri } from "./resolver.js";
 import { extractI18nBlock } from "./extract.js";
-import { resolveLang } from "../i18n.js";
+import { resolveLang } from "../lang/i18n.js";
 
 console.log("[bind] script loaded");
 

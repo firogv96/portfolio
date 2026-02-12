@@ -6,6 +6,6 @@ const lang = resolveLang();
 window.APP = window.APP || {};
 window.APP.lang = lang;
 
-import { bindWpContent } from "./cms/bind.js";
+import { bindWpContent } from "../cms/bind.js";
 console.log("[page] calling bindWpContent()");
 bindWpContent();

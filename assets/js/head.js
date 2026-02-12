@@ -1,4 +1,3 @@
-// assets/js/head.js
 (() => {
   const head = document.head;
 
@@ -73,6 +72,6 @@
 
   // 5) Web Components registry
   addScriptModule("/components/index.js");
-  addScriptModule("/assets/js/bootstrap.js");
+  addScriptModule("/assets/js/lang/bootstrap.js");
   /* addScriptModule("/assets/js/cms/debug-acf.js"); */
 })();

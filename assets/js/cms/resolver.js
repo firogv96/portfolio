@@ -11,7 +11,11 @@ export async function getEntryByUri(uri) {
   if (!u.startsWith("/")) u = "/" + u;
   if (!u.endsWith("/")) u = u + "/";
 
-  const data = await gql(QUERY_ENTRY_BY_URI, { uri: u });
+  const data = await gql(
+    QUERY_ENTRY_BY_URI,
+    { uri: u },
+    { cacheKey: `nodeByUri:${u}` },
+  );
   const node = data?.nodeByUri;
   if (!node) return null;
 
